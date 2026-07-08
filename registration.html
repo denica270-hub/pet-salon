@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Pet Registration</title>
+</head>
+<body>
+    <header> 
+        <h1> Registration</h1>
+    
+    </header>
+
+    <main> 
+        <section> 
+            <h2 class="text-warning">Registered Pets</h2>
+            <form class="p-5 border m-5 round bg-light">
+
+        <div>
+            <ol id="PetList"></ol>
+        </div>
+        <div class="Petlist">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="name" id="petName" placeholder="">
+
+        <div class="Petlist">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" id="" placeholder="">
+    </div> 
+
+    <div class="Petlist">
+        <label class="form-lable">Gender</label>
+        <input class="form-control"type="name" id="Female,Male" placeholder="">
+    </div>   
+
+    <div class="Petlist">
+        <label class="form-label">Service</label>
+        <input class="form-control" type="name" id="" placeholder="">
+</div>
+
+    <div class="Petlist">
+        <label class="form-label">Breed</label>
+        <input class="form-control" type= "name" id="" placeholder="">
+
+
+    <div class="Petlist">
+        <label class="form-label">Breed</label>
+        <select class="form-select" name=" id="productCategory>
+            <option value="">Select a category</option>
+            <option value="electronics">Bull dog</option>
+            <option value="electronics">Pug</option>
+            <option value="electronics">Beagle</option>
+            <option value="electronics">Goldren Retirver</option>
+        </select>
+    </div>
+        <label class="form-label">Service</label>
+        <select class="form-select" name=" id="productCategory>
+            <option value="">Select a category</option>
+            <option value="electronics">Hair Trim</option>
+            <option value="electronics">Yearly Shots</option>
+            <option value="electronics">Prescriptions</option>
+            <option value="electronics">PlayDates</option>
+        </select>
+
+    <div class="d-flex justify-content-end gap-3">
+        <button onlick="registerProduct(event)" class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-secondary" type="reset">Reset</button>
+    </div>
+
+
+    </form>
+        <div id="productList"></div>
+
+    </main>  
+    </section>
+
+    <script src="./scripts/registration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
