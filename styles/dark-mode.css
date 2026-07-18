@@ -1,0 +1,35 @@
+/* Default Color - Light Mode */
+:root{
+    --background-color: #f4f4fb; url(`../images/?`);
+    --surface-color: red;
+    --accent-color: #008fff;
+    --text-color: #1a2744;
+}
+
+/* Dark Mode Colors - When applying the class */
+.dark-mode{
+    --background-color: #1a2744; url(`../image)
+    --surface-color: #23345a;
+    --accent-color: #f4f4fb;
+    --text-color: #45adff;  
+}
+
+
+/*Apply the varibles: style the page */
+body{  /*if you get an image not color*/
+    background-color:var(--background-color);
+}
+
+form{
+
+    background-color: var(--surface-color);
+}
+
+h1 {
+    color: var(--accent-color);
+
+}
+
+*{
+    color:var(--text-color);
+}

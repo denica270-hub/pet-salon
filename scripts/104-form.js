@@ -12,7 +12,7 @@ function registerProduct(){
     // prevent refreshing the browser
     event.preventDefault();
     //console.log(event);
-}//Testing function and button
+//Testing function and button
  //console
 
 
@@ -27,7 +27,7 @@ let productCategory= document.getElementById("produtCategory").value;
 let newProduct = new product(produce)
 
 
-    function displayCard(newProduct);{
+    displayCard(newProduct);}
     
     //2.2 display the product-object in the broswer ()
 const container =document.getElementById("productsList");

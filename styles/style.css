@@ -1,0 +1,41 @@
+
+.home body {
+    border: 5px soild black;
+    margin: 5px;
+    padding: 50px;
+    min-height: 50vh;
+    box-sizing: border-box; 
+}
+
+
+
+.service body {
+    border: 5px soild black;
+    margin: 5px;
+    padding: 50px;
+    min-height: 50vh;
+    box-sizing: border-box;
+
+}
+
+.Registration body{
+    border: 5px soild black;
+    margin: 5px;
+    padding: 50px;
+    min-height: 50vh;
+    box-sizing: border-box;
+}
+
+
+
+.btn-primary{
+    background-color: red !important;
+}
+
+.myclass{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    letter-spacing: 4px;
+    padding: 10px;
+    background-color: red;
+}

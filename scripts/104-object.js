@@ -42,10 +42,20 @@ console.log(student1.studentNumber);
 
 // === Object Constructor===//
 
-function Person(name, lastname, age){
-    this.name= valueName;
-    this.lastname= valueLastname;
-    this.age= valueAge;
+let student1= {
+    name: "fernanda",
+   date: "05/31/1992",
+   studentNumber: 1234
+};
+
+console.log(student1);
+
+//1. Access a Vallue ->.
+student1.name
+console.log("Hello, my name is", student1.name);
+
+//Interpolation
+console.log(`Hello,my name is ${student1.name} and my number is ${student1.studentNumber}. `);
 }
  // creating an object with the constructor
 let person3 = new Person("fred","murr",34);

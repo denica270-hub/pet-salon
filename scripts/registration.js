@@ -54,7 +54,7 @@ let pet4 = {
     name:"Jay",
     age:5,
     gender: "Male",
-    service:"Play Date",
+    service:"PlayDate",
     breed: "Gold Retirver"
 };
 
@@ -62,7 +62,7 @@ let pet5 = {
     name:"Crystal",
     age:1,
     gender:"Male",
-    service:"Play Date",
+    service:"PlayDate",
     breed:"Bull Dog",
 };
 
@@ -75,27 +75,45 @@ let pet6= {
 }
 
 
-let petsList = [pet1, pet2, pet3,pet1,pet5,pet6];
+let petList = [pet1, pet2, pet3,pet4,pet5,pet6];
 
-console.log(petsList[0]);
-console.log(petsList[1]);
-console.log(petsList[2]);
+console.log(petList[0]);
+console.log(petList[1]);
+console.log(petList[2]);
 
 
 function displayPets() {
-    let petList = document.getElementById("PetList");
+    console.log("...........");
+    
+    let petListTable = document.getElementById("petList");
     let result = "";
 
-    for(i=0; i<petsList.length; i++){
-        console.log(petsList[i].name);
-        result+=`<li> ${petsList[i].name} </li>`;
+    for(i=0; i<petList.length; i++){
+        console.log(petList[i].name);
+        result+=`
+            <tr id="${i}">
+                <td>${petList[i].name}</td>
+                <td>${petList[i].age}</td>
+                <td>${petList[i].gender}</td>
+                <td>${petList[i].service}</td>
+                <td>${petList[i].breed}</td>
+                <td><button class="btn btn-danger" onclick="deletePet(${i})">Delete</button></td>
+            </tr>
+        `;
     } 
-    petList.innerHTML = result;
+    petListTable.innerHTML = result;
+}
+
+
+function deletePet(petId) {
+    document.getElementById(petId).remove()
+    petList.splice(petId, 1)
+    displayPets()
 }
 
 displayPets();
 
-function Product(valueName,valueAge,valueGender,valueService,valueBreed){
+function newPet(valueName,valueAge,valueGender,valueService,valueBreed){
     this.name= valueName;
     this.age= valueAge;
     this.gender= valueGender;
@@ -103,20 +121,50 @@ function Product(valueName,valueAge,valueGender,valueService,valueBreed){
     this.breed= valueBreed;
 }
 
-function registerProduct(event){
+
+function registerPetsList(event){
     console.log("Connected");
-        event.preventDefault();
-        console.log(event);
+    event.preventDefault();
+    console.log("Clicked");
 
-let productName = document.getElementById("productName").value;
-let productAge = document.getElementById("productAge").value;
-let producGender = document.getElementById("productGender").value;
-let productService = document.getElementById("productService").value;
-let productBreed = document.getElementById("productBreed").value;
+    let petName = document.getElementById("petName").value;
+    let petAge = document.getElementById("petAge").value;
+    let petGender = document.getElementById("petGender").value;
+    let petService = document.getElementById("petService").value;
+    let petBreed = document.getElementById("petBreed").value;
 
-let newProduct = new Product(productName,productAge,productGender,productService,productBreed);
-    console.log(newProduct);
+    let newPetlist = new newPet(petName,petAge,petGender,petService,petBreed);
+    //console.log("new pet " +newPetList);       
+    const container = document.getElementById("petList");
 
-const container = document.getElelmentById("productList") ;  
-    container.innerHTML +=`           `;
+    container.innerHTML +=`
+        <tr>
+            <td>${newPetlist.name}</td>
+            <td>${newPetlist.age}</td>
+            <td>${newPetlist.gender}</td>
+            <td>${newPetlist.service}</td>
+            <td>${newPetlist.breed}</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    `;
+    
+};
+
+:root{
+    --background-color: #f4f4fb; url(`../images/images.jpg2.jpg);
+    --surface-color: red;
+    --accent-color: #008fff;
+    --text-color: #1a2744;
 }
+
+/* Dark Mode Colors - When applying the class */
+.dark-mode{
+    --background-color: #1a2744; url(`../images/images.jpg2.jpg);
+    --surface-color: #23345a;
+    --accent-color: #f4f4fb;
+    --text-color: #45adff;  
+}
+
+
+
+

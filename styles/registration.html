@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/styles/dark-mode.css">
+    <link href="/styles/style.css">
+    <title> Registration</title>
+
+<header>Welcome to Best Doggie Ever Salon</header>
+    <div class="m-5 d-flex justify-content-end">
+    <button id="changeModeButton" class="btn btn-dark">🌙Change mode</button>
+    </div>
+</header>
+
+<body class="p-5 border m-5 round bg-light">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Add Doggie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <span class="navbar-toggler-icon"></span>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+            </ul>
+        </div>
+            </div>
+        </nav>
+
+        <div>
+            <ol id="PetList"></ol>
+        </div>
+        <div class="Petlist">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="name" id="petName" placeholder="">
+
+        <div class="Petlist">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" id="petAge" placeholder="">
+    </div> 
+
+    <div class="Petlist">
+        <label class="form-lable">Gender</label>
+        <input class="form-control"type="name" id="petGender" placeholder="">
+    </div>   
+
+
+    <div class="Petlist">
+        <label class="form-label">Breed</label>
+        <select class="form-select" name="" id="petBreed">
+            <option value="">Select a category</option>
+            <option value="Bull dog">Bull dog</option>
+            <option value="Pug">Pug</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Goldren Retirver">Goldren Retirver</option>
+        </select>
+    </div>
+        <label class="form-label">Service</label>
+        <select class="form-select" name="" id="petService">
+            <option value="">Select a category</option>
+            <option value="Hair Trim">Hair Trim</option>
+            <option value="Yearly Shots">Yearly Shots</option>
+            <option value="Prescriptions">Prescriptions</option>
+            <option value="PlayDates">PlayDates</option>
+        </select>
+
+    <div class="d-flex justify-content-end gap-3">
+        <button type="button" id="sumbitBtn" class="btn btn-success" onclick="registerPetsList(event)">Submit</button>
+        <button class="btn btn-warning" type="reset">Reset</button>
+
+    </div>
+
+            <h2> Pet List</h2>
+        <form class="p-5 border m-5 rounded bg text-warning" ></form>
+            
+
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Service</th>
+            <th>Breed</th>
+            <th>Action</th>
+        </tr>
+
+        <tbody id="petList">
+            <!-- Here rendering pet s-->
+        </tbody>
+    </table>
+
+</form>
+    </section>
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./scripts/registrtion.js"></script>
+</body>
+</html>
